@@ -19,6 +19,20 @@ async function fetchWithFirebaseHeaders(request) {
     return await getIdToken(auth.currentUser);
   }
 
+  export default function Header({initialUser}) {
+        const user = useUserSession(initialUser)
+
+        const handleSignOut = event => {
+                event.preventDefault();
+                signOut()
+        };
+
+        const handleSignIn = event => {
+                event.preventDefault()
+                signInWithGoogle()
+        };
+
+  }
 
   function useUserSession(initialUser) {
     // The initialUser comes from the server via a server component
@@ -61,7 +75,3 @@ async function fetchWithFirebaseHeaders(request) {
 
     return user;
 }
-
-return (
-    <Header initialUser={currentUser?.toJSON()} />
-)
