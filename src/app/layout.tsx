@@ -31,6 +31,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} >
+        <Header initialUser={currentUser?.toJSON()}/>
           <main>
             {children}
           </main>     

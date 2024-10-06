@@ -1,3 +1,17 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+import { 
+        signInWithGoogle, 
+        signOut, 
+        onAuthStateChanged,
+} from '@/src/lib/firebase/auth.js'
+
+import { useRouter } from 'next/navigation'
+import { firebaseConfig } from '@/app/lib/firebase/config';
+
+
+
 async function fetchWithFirebaseHeaders(request) {
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
@@ -31,6 +45,10 @@ async function fetchWithFirebaseHeaders(request) {
                 event.preventDefault()
                 signInWithGoogle()
         };
+
+        return (
+                <h1>Hello</h1>
+        )
 
   }
 
