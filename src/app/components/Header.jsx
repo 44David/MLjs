@@ -5,7 +5,7 @@ import {
         signInWithGoogle, 
         signOut, 
         onAuthStateChanged,
-} from '@/src/lib/firebase/auth.js'
+} from '@/app/lib/firebase/auth'
 
 import { useRouter } from 'next/navigation'
 import { firebaseConfig } from '@/app/lib/firebase/config';
