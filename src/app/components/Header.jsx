@@ -47,7 +47,7 @@ async function fetchWithFirebaseHeaders(request) {
         };
 
         return (
-                <h1>Hello</h1>
+                <h1><a href='#' onClick={handleSignIn}>Sign in with google</a></h1>
         )
 
   }
